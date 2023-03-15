@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Index com Parallax</title>
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo-header">Logo</a>
+        <ul class="menu-header">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Sobre Nós</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </header>
+    <!--fim header-->
+    <section id="fundo">
+        <img src="./stars.png" id="bg1" alt="fundo de estrela">
+        <img src="./moon.png" id="bg2" alt="fundo de lua">
+        <h2 id="titleTop"> Projeto Teste - @gabrielxgraca</h2>
+        <a href="#meio-page" id="btn">Saiba Mais</a>
+        <img src="./mountains_behind.png" id="bg3" alt="fundo de traz montanha">
+        <img src="./mountains_front.png" id="bg4" alt="frente da mointanha">
+    </section>
+    <!--fim section #fundo-->
+    <div class="meio" id="meio-page">
+        <h2>Parallax Scroll Efeito</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab inventore, eveniet rerum ipsa placeat neque commodi voluptatum quasi molestias dolore nemo ea autem numquam maiores tempora magnam dignissimos itaque atque?</p>
+        <br>        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In neque dicta maxime doloremque veniam asperiores nemo inventore minus incidunt necessitatibus molestiae earum nostrum officia, doloribus nam harum, recusandae minima placeat!</p>
+        <br>        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate pariatur, unde ut aspernatur repudiandae totam excepturi officia tempore saepe eum corrupti tempora, minus est? Veniam dicta dolor hic possimus atque!</p>
+    </div>
+    <!--fim div #meio-->
+    <div id="fim">
+        <h1 id="text-fim">Estilo Gradiente</h1>
+        <span class="material-symbols-outlined">
+            expand_more
+        </span>
+        <div class="texto-revel">
+            <h2>Teste </h2>
+        </div>
+    </div>
+    
+
+    <script>
+        let bg1 = document.getElementById('bg1');
+        let bg2 = document.getElementById('bg2');
+        let bg3 = document.getElementById('bg3');
+        let bg4 = document.getElementById('bg4');
+        let titleTop = document.getElementById('titleTop');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+            bg1.style.left = value * 0.25 + 'px';
+            bg2.style.top = value * 1.05 + 'px';
+            bg3.style.top = value * 0.5 + 'px';
+            bg4.style.left = value * 0 + 'px';
+            titleTop.style.marginRight = value * 4 + 'px';
+            titleTop.style.marginTop = value * 1.5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            header.style.marginTop = value * 0.5 + 'px';
+
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #7597de);
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+
+.logo-header{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+.menu-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-header li{
+    list-style: none;
+    margin-left: 50px;
+}
+
+.menu-header a{
+    text-decoration: none;
+    padding: 10px;
+    color: #fff;
+    border-radius: 20px;
+}
+
+.menu-header a:hover{
+    background: #fff;
+    color: #2b1055;
+}
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent);
+    z-index: 999;
+}
+
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#bg1{
+    mix-blend-mode: screen;
+}
+
+#titleTop{
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 5rem;
+    z-index: 9;
+}
+
+#btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #fff;
+    border-radius: 40px;
+    color: #2b1055;
+    font-size: 2rem;
+    z-index: 9;
+    transform: translateY(120px);
+}
+
+#bg4{
+    z-index: 10;
+}
+
+.meio{
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+}
+
+.meio h2{
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.meio p{
+    font-size: 1rem;
+    color: #fff;
+}
+
+#fim{
+    animation: gradient 10s ease-in-out alternate infinite;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+    background-size: 300%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#fim span{
+    font-size: 140px;
+}
+
+.material-symbols-outlined{
+    animation: seta-move 2s ease alternate infinite;
+    display: flex;
+    place-items: center;    
+}
+
+.texto-revel{
+    overflow: hidden;
+    position: relative;
+}
+
+.texto-revel::after{
+    animation: reveal 5s ease forwards;    
+    background: #f6f9fa;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;   
+}
+
+.texto-revel h2{
+    animation: fadeReveal 1s 2s forwards;
+    opacity: 0;
+}
+
+/*KEYFRAMES*/
+@keyframes gradient{
+    from{
+    background-position: 0 50%;
+    }
+    to{
+    background-position: 100% 50%;
+    }
+}
+
+@keyframes seta-move {
+    to{
+        transform: translateY(30px);
+    }
+}
+
+@keyframes reveal{
+    from{
+        transform: translateX(-101%);
+    }
+    to{
+        transform: translateX(101%);
+    }
+}
+
+@keyframes fadeReveal {
+    to{
+        opacity: 1;
+    }
+}
